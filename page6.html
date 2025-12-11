@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Love Letter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, #ff9ac2, #1a1a1a);
+            overflow: hidden;
+            color: white;
+            text-align: center;
+        }
+
+        /* Floating glowing hearts */
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            color: rgba(255, 150, 180, 0.9);
+            font-size: 20px;
+            animation: rise linear infinite;
+        }
+
+        @keyframes rise {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-120vh) scale(0.4); opacity: 0; }
+        }
+
+        .container {
+            margin-top: 12vh;
+            width: 80%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 150, 200, 0.4);
+            animation: fadeIn 1.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0;
+            animation: reveal 1.5s forwards;
+        }
+
+        @keyframes reveal {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 12px 28px;
+            background: rgba(255, 120, 170, 0.85);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: rgba(255, 150, 190, 1);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Thank You For Everything ❤️</h1>
+        <p class="text" style="animation-delay:0.5s;">Aku cuma mau bilang…</p>
+        <p class="text" style="animation-delay:1.5s;">Terima kasih sudah hadir di hidup aku.</p>
+        <p class="text" style="animation-delay:2.5s;">Terima kasih sudah jadi rumah paling nyaman buat hati ini.</p>
+        <p class="text" style="animation-delay:3.5s;">Semoga kita selalu bareng, hari ini… esok… dan seterusnya.</p>
+        <p class="text" style="animation-delay:4.5s; font-weight:bold; font-size:1.4rem;">Happy Birthday, My Love ❤️</p>
+
+        <button class="btn" onclick="window.location.href='index.html'">Back to Start</button>
+    </div>
+
+    <script>
+        function floatingHearts() {
+            for (let i = 0; i < 40; i++) {
+                const h = document.createElement('div');
+                h.classList.add('heart');
+                h.innerHTML = '❤';
+                h.style.left = Math.random() * 100 + 'vw';
+                h.style.fontSize = (15 + Math.random() * 20) + 'px';
+                h.style.animationDuration = (4 + Math.random() * 4) + 's';
+                document.body.appendChild(h);
+            }
+        }
+        floatingHearts();
+    </script>
+
+</body>
+</html>

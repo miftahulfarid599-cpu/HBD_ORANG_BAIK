@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For You ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #000000, #2b0f1f);
+            background-size: 400% 400%;
+            animation: bgMove 15s ease infinite;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Falling Hearts Effect */
+        .heart {
+            position: absolute;
+            top: -10px;
+            color: #ff70b8;
+            font-size: 20px;
+            opacity: 0.7;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(110vh) rotate(360deg); }
+        }
+
+        h1 {
+            margin-top: 120px;
+            font-size: 42px;
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 20px;
+            opacity: 0.9;
+            animation: fadeIn 3s ease;
+        }
+
+        .next-btn {
+            margin-top: 50px;
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: 18px;
+            color: white;
+            background: #ff55aa;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(255, 85, 170, 0.7);
+            transition: 0.3s;
+        }
+
+        .next-btn:hover {
+            background: #ff2299;
+            box-shadow: 0 0 25px rgba(255, 34, 153, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>You're Truly Special 💖</h1>
+    <p>Ada banyak hal yang ingin aku sampaikan...<br>
+    mulai dari rasa syukur, sampai betapa berartinya kamu buat aku.</p>
+
+    <a href="page3.html" class="next-btn">Next ➜</a>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (3 + Math.random() * 4) + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 7000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+
+</body>
+</html>
