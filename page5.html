@@ -153,6 +153,14 @@ for (let i = 0; i < 35; i++) {
     <div class="photo"><img src="pic4.jpg" onclick="openLightbox(this.src)"></div>
     <div class="photo"><img src="pic5.jpg" onclick="openLightbox(this.src)"></div>
     <div class="photo"><img src="pic6.jpg" onclick="openLightbox(this.src)"></div>
+    <div class="photo"><img src="P1.jpg" onclick="openLightbox(this.src)"></div>
+    <div class="photo"><img src="P2.jpg" onclick="openLightbox(this.src)"></div>
+    <div class="photo"><img src="P3.jpg" onclick="openLightbox(this.src)"></div>
+    <div class="photo"><img src="P4.jpg" onclick="openLightbox(this.src)"></div>
+    <div class="photo"><img src="P5.jpg" onclick="openLightbox(this.src)"></div>
+    <div class="photo"><img src="P6.jpg" onclick="openLightbox(this.src)"></div>
+    <div class="photo"><img src="P7.jpg" onclick="openLightbox(this.src)"></div>
+    <div class="photo"><img src="P8.jpg" onclick="openLightbox(this.src)"></div>
   </div>
 
   <button class="next-btn" onclick="location.href='page6.html'">Next →</button>
@@ -162,6 +170,32 @@ for (let i = 0; i < 35; i++) {
   <img id="lightbox-img">
 </div>
 
+  <audio id="bg-music" src="Happy.mp3" loop></audio>
+
+<button id="playBtn" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff4f79;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+">
+  ❤️ Play Music
+</button>
+
+<script>
+document.getElementById("playBtn").addEventListener("click", () => {
+  const audio = document.getElementById("bg-music");
+  audio.play();
+});
+</script>
+y  
+  
 <script>
 function openLightbox(src) {
   document.getElementById('lightbox-img').src = src;
@@ -174,4 +208,5 @@ function closeLightbox() {
 
 </body>
 </html>
+
 
