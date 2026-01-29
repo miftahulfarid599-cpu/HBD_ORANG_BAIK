@@ -1,88 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f0f0f, #1b1b1b, #2a2a2a);
-            background-size: 400% 400%;
-            animation: gradientMove 12s ease infinite;
-            color: white;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .container {
-            margin-top: 100px;
-            animation: fadeIn 2s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            animation: glow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66aa; }
-            to { text-shadow: 0 0 20px #ff55aa, 0 0 35px #ff1188; }
-        }
-
-        .photo {
-            width: 250px;
-            height: 250px;
-            border-radius: 20px;
-            object-fit: cover;
-            box-shadow: 0 0 25px rgba(255, 100, 150, 0.5);
-            animation: float 4s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        .next-btn {
-            margin-top: 40px;
-            display: inline-block;
-            padding: 14px 32px;
-            font-size: 18px;
-            color: white;
-            background: #ff55aa;
-            border-radius: 30px;
-            text-decoration: none;
-            box-shadow: 0 0 15px rgba(255, 85, 170, 0.7);
-            transition: 0.3s;
-        }
-
-        .next-btn:hover {
-            background: #ff2299;
-            box-shadow: 0 0 25px rgba(255, 34, 153, 0.9);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sayangku</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <h1>Happy Birthday, Love ❤️</h1>
-        <img src="foto.jpg" class="photo" alt="Foto Pacar" />
-        <p style="margin-top: 20px; font-size: 20px; opacity: 0.9;">Semoga hari spesialmu indah seperti dirimu ✨</p>
 
-        <a href="page2.html" class="next-btn">Next ➜</a>
+<body>
+
+<div class="wrapper">
+    <div class="card">
+        <h1>Happy Birthday Sayangku ❤️</h1>
+
+        <img src="foto.jpg" alt="Foto Kita">
+
+        <p class="text">
+            Sebelum masuk, aku punya teka teki sayangku 😆 <br><br>
+            apa yang bisa bertambah, tapi tidak bisa berkurang...? 🤔 <br><br>
+            apa hayoooo hehehee
+        </p>
+
+        <p class="answer">
+            Jawabannya adalah <b>umurrr</b> 😆💖
+        </p>
+
+        <p class="closing">
+            Selamat ulang tahun yah sayangkuu ❤️ <br>
+            love you moreee sayangkuu 💕 <br>
+            Next yah sayang 😘
+        </p>
+
+        <button onclick="location.href='page2.html'">Next ➜</button>
     </div>
+</div>
+
 </body>
 </html>
