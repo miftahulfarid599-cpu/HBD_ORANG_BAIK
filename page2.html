@@ -1,107 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For You ❤️</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1a1a1a, #000000, #2b0f1f);
-            background-size: 400% 400%;
-            animation: bgMove 15s ease infinite;
-            color: white;
-            text-align: center;
-            overflow: hidden;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You’re Truly Special</title>
 
-        @keyframes bgMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-        /* Falling Hearts Effect */
-        .heart {
-            position: absolute;
-            top: -10px;
-            color: #ff70b8;
-            font-size: 20px;
-            opacity: 0.7;
-            animation: fall linear infinite;
-        }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #120814, #000);
+  color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
-        @keyframes fall {
-            0% { transform: translateY(0) rotate(0deg); }
-            100% { transform: translateY(110vh) rotate(360deg); }
-        }
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 700px;
+  padding: 24px 20px 40px;
+  text-align: center;
+  animation: fadeUp 1.2s ease;
+}
 
-        h1 {
-            margin-top: 120px;
-            font-size: 42px;
-            animation: fadeIn 2s ease;
-        }
+/* TITLE */
+h1 {
+  font-size: clamp(26px, 5vw, 40px);
+  margin-bottom: 16px;
+  text-shadow: 0 0 15px rgba(255, 100, 150, 0.6);
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+/* TEXT */
+p {
+  font-size: clamp(14px, 3.8vw, 16px);
+  line-height: 1.8;
+  margin-bottom: 18px;
+  opacity: 0.95;
+}
 
-        p {
-            margin-top: 20px;
-            font-size: 20px;
-            opacity: 0.9;
-            animation: fadeIn 3s ease;
-        }
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 34px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff4d9d, #ff1f6d);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 25px rgba(255, 77, 157, 0.6);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
 
-        .next-btn {
-            margin-top: 50px;
-            display: inline-block;
-            padding: 14px 32px;
-            font-size: 18px;
-            color: white;
-            background: #ff55aa;
-            border-radius: 30px;
-            text-decoration: none;
-            box-shadow: 0 0 15px rgba(255, 85, 170, 0.7);
-            transition: 0.3s;
-        }
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 35px rgba(255, 77, 157, 0.9);
+}
 
-        .next-btn:hover {
-            background: #ff2299;
-            box-shadow: 0 0 25px rgba(255, 34, 153, 0.9);
-        }
-    </style>
+/* FLOATING HEARTS */
+.heart {
+  position: absolute;
+  color: #ff2d75;
+  font-size: 14px;
+  opacity: .7;
+  animation: float 10s linear infinite;
+}
+
+.heart:nth-child(1){ left:10%; animation-duration:12s; }
+.heart:nth-child(2){ left:25%; animation-duration:9s; }
+.heart:nth-child(3){ left:40%; animation-duration:11s; }
+.heart:nth-child(4){ left:65%; animation-duration:8s; }
+.heart:nth-child(5){ left:80%; animation-duration:13s; }
+
+@keyframes float {
+  0% { transform: translateY(100vh) scale(.8); opacity:0; }
+  20% { opacity:.7; }
+  100% { transform: translateY(-10vh) scale(1.2); opacity:0; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE EXTRA */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 16px 32px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Kamu adalah orang spesial yang aku temui di tahun ini 💖</h1>
-    <p>Ada banyak hal yang ingin aku sampaikan...<br>
-    mulai dari rasa syukur, sampai betapa berartinya kamu buat aku.<br>
-    Jujur aku ga tau hubungan ini bertahan sampai dimana,,,,<br>
-    namun aku bangga bisa mengenal dan memiliki dirimu sampai sejauh ini,<br>
-    Love You More 💖 sayang akuuuu,,,,, </p>
+<!-- FLOATING HEARTS -->
+<div class="heart">❤️</div>
+<div class="heart">❤️</div>
+<div class="heart">❤️</div>
+<div class="heart">❤️</div>
+<div class="heart">❤️</div>
 
-    <a href="page3.html" class="next-btn">Next ➜</a>
+<div class="container">
+  <h1>You’re Truly Special 💖</h1>
 
-    <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (3 + Math.random() * 4) + 's';
-            document.body.appendChild(heart);
+  <p>
+    Dihari spesialmu ini aku ingin menyampaikan sesuatu sayangku.<br>
+    Kamu itu sangat berarti buat aku sayang, doa terbaik menyertaimu sayangku.<br>
+    Semoga sayang panjang umur, sehat selalu, segala urusannya dipermudah oleh yang maha kuasa.<br>
+    Intinya doa terbaikkkk lah buat sayang.
+  </p>
 
-            setTimeout(() => {
-                heart.remove();
-            }, 7000);
-        }
+  <p>
+    Disini aku ingin berpesan sesuatu sayangkuuuu,<br>
+    Sayang jaga pola makannya yahh,,, jaga kesehatannya,,,<br>
+    Sayang jangan terlalu banyak pikiran yaahhh, jangan terlalu kecapekan,,,,<br>
+    Kalau ada masalah, cerita yah sayang kuuuu, kita selesaikan sama-sama.<br>
+    Okkkkkeeee sayang kuuuuuuuu?????<br>
+    ehhh udah next lagi,,, hehehehe 😆
+  </p>
 
-        setInterval(createHeart, 300);
-    </script>
+  <a href="page3.html" class="btn">Next →</a>
+</div>
 
 </body>
-
 </html>
+
